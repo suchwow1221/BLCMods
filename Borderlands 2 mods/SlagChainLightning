@@ -1,0 +1,19 @@
+# This basically just replaces the Delta part of the grenade mod which is responsible for its elemental attribute from Shock to Slag
+# Running this mod will remove all the normal Chain Lightnings in the game and will not replace the chain lightning in your inventory / bank due to Sanity Check
+# Instead, just use gibbed save editor and paste this code. 
+# WARNING: Always run this patch mod before starting the game or the slag chain lightning will disappear.
+# BL2(BwAAAAAagAkAFQmgEBFQ6P+/AaIdgwsDBkMGw/9/CMMVw///AeI=) 
+set GD_Aster_GrenadeMods.PartLists.Parts_ChainLightning DeltaPartData
+(
+    bEnabled = True,
+    WeightedParts =
+    (
+        (
+            Part = GrenadeModPartDefinition'GD_GrenadeMods.Accessory.Accessory_Slag_Grade4',
+            Manufacturers = ,
+            MinGameStageIndex = 0,
+            MaxGameStageIndex = 1,
+            DefaultWeightIndex = 2
+        )
+    )
+)
